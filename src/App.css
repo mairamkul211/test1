@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+:root{
+  --text-color: #000000;
+  --bg-color: #ffffff;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.theme-dark{
+  --text-color: #ffffff;
+  --bg-color: #000000;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1,h2,h3,h4,h5,h6,p,a,button{
+  color: var(--text-color);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content-bg-color{
+  background-color: var(--bg-color);
+}
+.main-content{
+  width: 100%;
+  height: 100vh;
   display: flex;
+  /* justify-content: center; */
+  
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
 }
-
-.App-link {
-  color: #61dafb;
+input[type="checkbox"]{
+  margin-left: 30px;
+  position: relative;
+  /* left: 1380px; */
+  width: 60px;
+  height: 30px;
+  -webkit-appearance: none;
+  outline: none;
+  background: #c6c6c6;
+  border-radius: 20px;
+  transition: .5s;
+  box-shadow: inset 0 0 5px rgba(0,0,0,.2);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input:checked[type="checkbox"]{
+  background: #40e551;
+}
+input[type="checkbox"]::before{
+  content: '';
+  position: absolute;
+  width: 30px;
+  height:30px;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transition: .5s;
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+input:checked[type="checkbox"]:before {
+  left: 30px;
+}
+.block{
+  width: 200px;
+  height: 300px;
+  border: 2px solid chartreuse;
+  box-shadow: 1px  4px 8px rgb(185, 230, 140);
+  text-align: center;
+  border-radius: 20px;
+}
+.dos{
+  display: flex;
+  align-items: baseline;
+}
+.block:hover{
+  box-shadow: 3px 4px rgb(104, 121, 86);
+}
+.iso{
+  width: 70px;
+  height: 70px;
+  border-radius: 60px;
+  margin-top: 30px;
+  border: 1px solid chartreuse;
+}
+.a{
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 50px;
+  background-color: #0b6b15;
+}
+.a:hover{
+  background-color: #40e551;
 }
